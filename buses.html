@@ -14,7 +14,20 @@
 // single bus - static
 // ------------------------------------
 // YOUR CODE
+var locations = getBusLocations();
+//var bus = locations.vehicle[0];
+//addMarker(bus);
+//var bus2 = locations.vehicle[9];
+//addMarker(bus2);
+var showBus = function(){
+    for(var i=0; i<locations.vehicle.length; i++){
+        addMarker(locations.vehicle[i]);
+    }
+    console.log(new Date());
+}
 
+showBus();
+setInterval(showBus,15000);
 
 // ------------------------------------
 // all buses - static
